@@ -14,17 +14,20 @@ box-sizing:border-box;
 
 body{
 margin:0;
-height:100vh;
-overflow:hidden;
+min-height:100vh;
+overflow-x:hidden;
+overflow-y:auto;
 background:#050505;
 font-family:monospace;
 color:white;
 }
 
 
-/* Código hacker de fondo */
+/* Fondo hacker */
 .codigo{
-position:absolute;
+position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
 color:#ff4f9a;
@@ -32,6 +35,7 @@ opacity:0.15;
 font-size:14px;
 line-height:25px;
 overflow:hidden;
+z-index:0;
 }
 
 
@@ -39,21 +43,22 @@ overflow:hidden;
 .contenedor{
 position:relative;
 z-index:2;
-height:100vh;
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:20px;
+padding:25px 15px;
 }
 
 
+/* Ventana hacker */
 .terminal{
 
 background:rgba(10,10,10,0.95);
 border:2px solid #ff4f9a;
 border-radius:20px;
 padding:25px;
-width:95%;
+width:100%;
 max-width:520px;
 box-shadow:0 0 30px #ff4f9a;
 animation:entrada 2s;
@@ -70,21 +75,25 @@ text-shadow:0 0 15px #ff4f9a;
 
 p{
 font-size:16px;
-line-height:1.7;
+line-height:1.8;
 }
 
 
 .corazon{
+
 font-size:45px;
 text-align:center;
 animation:latido 1.5s infinite;
+
 }
 
 
 .nombre{
+
 color:#ff8ac2;
 font-size:22px;
 text-align:center;
+
 }
 
 
@@ -110,9 +119,11 @@ display:none;
 
 
 .final{
+
 text-align:center;
 color:#ff4f9a;
 font-size:19px;
+
 }
 
 
@@ -163,16 +174,12 @@ FELIZ DIA DE LA NOVIA 💗
 01001101 01100001 01110010 01101001 01100001
 <br>
 LOVE CONNECTION ACTIVE ❤️
-<br>
-01010100 01100101 01110001 01110101 01101001 01100101 01110010 01101111
-<br>
 
 </div>
 
 
 
 <div class="contenedor">
-
 
 <div class="terminal">
 
@@ -203,10 +210,9 @@ Feliz Día de la Novia ❤️
 
 <button onclick="abrirCarta()">
 
-Desbloquear mensaje 🔐
+Ejecutar LOVE_SYSTEM.exe ❤️
 
 </button>
-
 
 
 
@@ -245,7 +251,6 @@ Nunca cambies esa forma tan especial que tienes de ser, porque eso es parte de l
 </p>
 
 
-
 <p class="final">
 
 Feliz Día de la Novia, María ❤️
@@ -261,15 +266,12 @@ Tu colombiano desde Costa Rica 🇨🇴❤️🇨🇷
 </p>
 
 
-
 </div>
 
 
 </div>
 
-
 </div>
-
 
 
 
@@ -286,7 +288,7 @@ document.getElementById("carta").style.display="block";
 
 
 
-// Corazones y símbolos cayendo
+// Efectos cayendo ❤️✨
 
 const simbolos=[
 "❤️",
@@ -306,6 +308,7 @@ let elemento=document.createElement("div");
 elemento.innerHTML=
 simbolos[Math.floor(Math.random()*simbolos.length)];
 
+
 elemento.style.position="fixed";
 elemento.style.top="-30px";
 elemento.style.left=Math.random()*100+"vw";
@@ -316,6 +319,7 @@ elemento.style.pointerEvents="none";
 
 
 document.body.appendChild(elemento);
+
 
 
 let tiempo=5+Math.random()*7;
