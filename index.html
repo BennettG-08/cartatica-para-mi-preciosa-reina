@@ -4,113 +4,148 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Para mi preciosa reina ❤️</title>
+<title>Feliz Día de la Novia María ❤️</title>
 
 <style>
+
 *{
-    box-sizing: border-box;
+box-sizing:border-box;
 }
 
 body{
-    margin:0;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd1dc);
-    font-family:'Georgia',serif;
-    overflow:hidden;
+margin:0;
+height:100vh;
+overflow:hidden;
+background:#050505;
+font-family:monospace;
+color:white;
 }
 
-.carta{
-    width:90%;
-    max-width:500px;
-    background:white;
-    padding:30px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,0.25);
-    animation:entrada 1.8s ease;
-    position:relative;
-    z-index:2;
+/* Fondo hacker */
+.codigo{
+position:absolute;
+width:100%;
+height:100%;
+color:#ff4f9a;
+opacity:0.15;
+font-size:14px;
+line-height:25px;
+overflow:hidden;
+}
+
+/* Tarjeta */
+.contenedor{
+position:relative;
+z-index:2;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.terminal{
+
+background:rgba(10,10,10,0.95);
+border:2px solid #ff4f9a;
+border-radius:20px;
+padding:25px;
+width:95%;
+max-width:520px;
+box-shadow:0 0 30px #ff4f9a;
+animation:entrada 2s;
+
 }
 
 h1{
-    color:#e63946;
-    font-size:32px;
-}
 
-.fecha{
-    color:#777;
-    font-size:16px;
+color:#ff4f9a;
+text-align:center;
+text-shadow:0 0 15px #ff4f9a;
+
 }
 
 p{
-    color:#333;
-    font-size:18px;
-    line-height:1.7;
-}
 
-.corazon-grande{
-    font-size:50px;
-    animation:latido 1.5s infinite;
-}
+font-size:16px;
+line-height:1.7;
 
-.firma{
-    margin-top:20px;
-    font-size:20px;
-    color:#e63946;
 }
 
 .corazon{
-    position:absolute;
-    bottom:-50px;
-    animation:subir 7s linear infinite;
-    font-size:25px;
+
+font-size:45px;
+text-align:center;
+animation:latido 1.5s infinite;
+
 }
 
-@keyframes subir{
-    from{
-        transform:translateY(0);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-110vh);
-        opacity:0;
-    }
+.nombre{
+
+color:#ff8ac2;
+font-size:22px;
+text-align:center;
+
 }
+
+button{
+
+display:block;
+margin:20px auto;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#ff4f9a;
+color:white;
+font-size:16px;
+cursor:pointer;
+box-shadow:0 0 15px #ff4f9a;
+
+}
+
+.carta{
+
+display:none;
+}
+
+.final{
+
+text-align:center;
+color:#ff4f9a;
+font-size:19px;
+
+}
+
 
 @keyframes entrada{
-    from{
-        opacity:0;
-        transform:scale(0.7);
-    }
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
+
+from{
+
+opacity:0;
+transform:scale(.7);
+
 }
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
 
 @keyframes latido{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.2);}
-    100%{transform:scale(1);}
+
+50%{
+
+transform:scale(1.2);
+
 }
 
-.boton{
-    margin-top:20px;
-    background:#e63946;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:30px;
-    font-size:16px;
-    cursor:pointer;
 }
 
-.mensaje{
-    display:none;
-}
 
 </style>
 
@@ -118,86 +153,161 @@ p{
 
 <body>
 
-<div class="carta">
 
-<div class="corazon-grande">❤️</div>
+<div class="codigo">
 
-<h1>Para mi preciosa reina</h1>
+LOVE_SYSTEM.exe ❤️
+<br>
+ACCESS GRANTED...
+<br>
+LOADING HEART...
+<br>
+MARIA ❤️
+<br>
+COLOMBIA 🇨🇴
+<br>
+COSTA RICA 🇨🇷
+<br>
+ARGENTINA 🇦🇷
+<br>
+01001101 01100001 01110010 01101001 01100001 ❤️
+<br>
+FELIZ DIA DE LA NOVIA 💗
 
-<p class="fecha">01 de agosto de 2026</p>
+</div>
 
-<div id="inicio">
+
+<div class="contenedor">
+
+
+<div class="terminal">
+
+
+<div class="corazon">
+❤️
+</div>
+
+
+<h1>
+Feliz Día de la Novia ❤️
+</h1>
+
 
 <p>
-Tengo algo que quería hacerte porque aunque estemos lejos,
-tú en Argentina y yo en Costa Rica, quería darte un pequeño detalle hecho por mí.
+
+> Iniciando sorpresa especial...
+<br>
+> Motivo: Día de la Novia 💗
+<br>
+> Buscando persona especial...
+<br>
+> Encontrada: María ❤️
+
 </p>
 
-<button class="boton" onclick="abrirCarta()">
-Abrir mi carta ❤️
+
+<button onclick="abrirCarta()">
+
+Desbloquear mensaje 🔐
+
 </button>
 
-</div>
 
 
-<div class="mensaje" id="carta">
+<div class="carta" id="carta">
 
-<p>
-Mi amor ❤️
+
+<p class="nombre">
+
+Mi princesa preciosa ❤️
+
 </p>
 
-<p>
-La verdad me alegra mucho haberte conocido. Me gusta mucho hablar contigo,
-reírnos, compartir momentos y esa forma tan bonita que tenemos de llevarnos.
-</p>
 
 <p>
-Aunque haya kilómetros entre nosotros, quiero que sepas que eres alguien muy especial para mí.
-A veces quisiera poder estar ahí contigo, verte y compartir más cosas juntos,
-pero mientras tanto quiero que sientas mi cariño aunque estemos lejos.
+
+Quería hacerte algo diferente, algo que saliera de mí,
+porque aunque estemos lejos, tú en Argentina y yo en Costa Rica,
+quería darte un pequeño detalle para que tengas algo mío.
+
 </p>
 
-<p>
-Gracias por ser como eres conmigo, por tus detalles y por hacer que mis días sean más bonitos.
-Espero que cuando veas esto sonrías, porque lo hice pensando en ti.
-</p>
 
 <p>
+
+Me gusta mucho la forma en la que eres conmigo.
+Me encanta cuando me dices que me amas, cuando me dices
+que te gusto y esos momentos donde nos hacemos sentir bien.
+
+</p>
+
+
+<p>
+
+Me gusta esa manera tuya de ser, esa intensidad que tienes,
+porque es algo que te hace diferente y especial para mí.
+
+</p>
+
+
+<p>
+
+Aunque haya distancia entre nosotros, quiero que sepas que eres
+alguien muy importante para mí. Me gusta hablar contigo,
+reírme contigo y compartir esos momentos que tenemos.
+
+</p>
+
+
+<p>
+
+Gracias por llegar a mi vida, mi bombón.
+Espero que al ver esto sonrías, porque lo hice pensando en ti.
+
+</p>
+
+
+
+<p class="final">
+
+Feliz Día de la Novia, María ❤️
+
+<br><br>
+
 Te quiero mucho ❤️
+
+<br><br>
+
+Tu colombiano desde Costa Rica 🇨🇴❤️🇨🇷
+
 </p>
 
-<p class="firma">
-De tu colombiano desde Costa Rica 🇨🇴❤️🇨🇷
-</p>
+
 
 </div>
 
+
 </div>
+
+
+</div>
+
 
 
 <script>
 
 function abrirCarta(){
-document.getElementById("inicio").style.display="none";
+
+document.querySelector("button").style.display="none";
+
 document.getElementById("carta").style.display="block";
-}
-
-for(let i=0;i<35;i++){
-
-let corazon=document.createElement("div");
-
-corazon.className="corazon";
-corazon.innerHTML="❤️";
-
-corazon.style.left=Math.random()*100+"%";
-corazon.style.animationDelay=Math.random()*7+"s";
-corazon.style.fontSize=(15+Math.random()*25)+"px";
-
-document.body.appendChild(corazon);
 
 }
+
 
 </script>
 
+
 </body>
+
 </html>
