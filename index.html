@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi preciosa reina ❤️</title>
+
+<style>
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd1dc);
+    font-family:'Georgia',serif;
+    overflow:hidden;
+}
+
+.carta{
+    width:90%;
+    max-width:500px;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+    animation:entrada 1.8s ease;
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    color:#e63946;
+    font-size:32px;
+}
+
+.fecha{
+    color:#777;
+    font-size:16px;
+}
+
+p{
+    color:#333;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.corazon-grande{
+    font-size:50px;
+    animation:latido 1.5s infinite;
+}
+
+.firma{
+    margin-top:20px;
+    font-size:20px;
+    color:#e63946;
+}
+
+.corazon{
+    position:absolute;
+    bottom:-50px;
+    animation:subir 7s linear infinite;
+    font-size:25px;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:scale(0.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes latido{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+.boton{
+    margin-top:20px;
+    background:#e63946;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.mensaje{
+    display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="carta">
+
+<div class="corazon-grande">❤️</div>
+
+<h1>Para mi preciosa reina</h1>
+
+<p class="fecha">01 de agosto de 2026</p>
+
+<div id="inicio">
+
+<p>
+Tengo algo que quería hacerte porque aunque estemos lejos,
+tú en Argentina y yo en Costa Rica, quería darte un pequeño detalle hecho por mí.
+</p>
+
+<button class="boton" onclick="abrirCarta()">
+Abrir mi carta ❤️
+</button>
+
+</div>
+
+
+<div class="mensaje" id="carta">
+
+<p>
+Mi amor ❤️
+</p>
+
+<p>
+La verdad me alegra mucho haberte conocido. Me gusta mucho hablar contigo,
+reírnos, compartir momentos y esa forma tan bonita que tenemos de llevarnos.
+</p>
+
+<p>
+Aunque haya kilómetros entre nosotros, quiero que sepas que eres alguien muy especial para mí.
+A veces quisiera poder estar ahí contigo, verte y compartir más cosas juntos,
+pero mientras tanto quiero que sientas mi cariño aunque estemos lejos.
+</p>
+
+<p>
+Gracias por ser como eres conmigo, por tus detalles y por hacer que mis días sean más bonitos.
+Espero que cuando veas esto sonrías, porque lo hice pensando en ti.
+</p>
+
+<p>
+Te quiero mucho ❤️
+</p>
+
+<p class="firma">
+De tu colombiano desde Costa Rica 🇨🇴❤️🇨🇷
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+function abrirCarta(){
+document.getElementById("inicio").style.display="none";
+document.getElementById("carta").style.display="block";
+}
+
+for(let i=0;i<35;i++){
+
+let corazon=document.createElement("div");
+
+corazon.className="corazon";
+corazon.innerHTML="❤️";
+
+corazon.style.left=Math.random()*100+"%";
+corazon.style.animationDelay=Math.random()*7+"s";
+corazon.style.fontSize=(15+Math.random()*25)+"px";
+
+document.body.appendChild(corazon);
+
+}
+
+</script>
+
+</body>
+</html>
