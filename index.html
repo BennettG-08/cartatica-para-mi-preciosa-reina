@@ -21,7 +21,8 @@ font-family:monospace;
 color:white;
 }
 
-/* Fondo hacker */
+
+/* Código hacker de fondo */
 .codigo{
 position:absolute;
 width:100%;
@@ -33,7 +34,8 @@ line-height:25px;
 overflow:hidden;
 }
 
-/* Tarjeta */
+
+/* Contenedor */
 .contenedor{
 position:relative;
 z-index:2;
@@ -43,6 +45,7 @@ align-items:center;
 justify-content:center;
 padding:20px;
 }
+
 
 .terminal{
 
@@ -57,36 +60,33 @@ animation:entrada 2s;
 
 }
 
-h1{
 
+h1{
 color:#ff4f9a;
 text-align:center;
 text-shadow:0 0 15px #ff4f9a;
-
 }
+
 
 p{
-
 font-size:16px;
 line-height:1.7;
-
 }
 
-.corazon{
 
+.corazon{
 font-size:45px;
 text-align:center;
 animation:latido 1.5s infinite;
-
 }
 
-.nombre{
 
+.nombre{
 color:#ff8ac2;
 font-size:22px;
 text-align:center;
-
 }
+
 
 button{
 
@@ -103,34 +103,30 @@ box-shadow:0 0 15px #ff4f9a;
 
 }
 
-.carta{
 
+.carta{
 display:none;
 }
 
-.final{
 
+.final{
 text-align:center;
 color:#ff4f9a;
 font-size:19px;
-
 }
+
 
 
 @keyframes entrada{
 
 from{
-
 opacity:0;
 transform:scale(.7);
-
 }
 
 to{
-
 opacity:1;
 transform:scale(1);
-
 }
 
 }
@@ -139,17 +135,15 @@ transform:scale(1);
 @keyframes latido{
 
 50%{
-
 transform:scale(1.2);
-
 }
 
 }
-
 
 </style>
 
 </head>
+
 
 <body>
 
@@ -160,21 +154,21 @@ LOVE_SYSTEM.exe ❤️
 <br>
 ACCESS GRANTED...
 <br>
-LOADING HEART...
+LOADING HEART DATABASE...
 <br>
 MARIA ❤️
 <br>
-COLOMBIA 🇨🇴
-<br>
-COSTA RICA 🇨🇷
-<br>
-ARGENTINA 🇦🇷
-<br>
-01001101 01100001 01110010 01101001 01100001 ❤️
-<br>
 FELIZ DIA DE LA NOVIA 💗
+<br>
+01001101 01100001 01110010 01101001 01100001
+<br>
+LOVE CONNECTION ACTIVE ❤️
+<br>
+01010100 01100101 01110001 01110101 01101001 01100101 01110010 01101111
+<br>
 
 </div>
+
 
 
 <div class="contenedor">
@@ -195,7 +189,7 @@ Feliz Día de la Novia ❤️
 
 <p>
 
-> Iniciando sorpresa especial...
+> Iniciando mensaje especial...
 <br>
 > Motivo: Día de la Novia 💗
 <br>
@@ -206,11 +200,13 @@ Feliz Día de la Novia ❤️
 </p>
 
 
+
 <button onclick="abrirCarta()">
 
 Desbloquear mensaje 🔐
 
 </button>
+
 
 
 
@@ -225,45 +221,27 @@ Mi princesa preciosa ❤️
 
 
 <p>
-
-Quería hacerte algo diferente, algo que saliera de mí,
-porque aunque estemos lejos, tú en Argentina y yo en Costa Rica,
-quería darte un pequeño detalle para que tengas algo mío.
-
+Hoy quiero recordarte lo mucho que significas para mí y lo feliz que me hace tenerte en mi vida.
 </p>
 
 
 <p>
-
-Me gusta mucho la forma en la que eres conmigo.
-Me encanta cuando me dices que me amas, cuando me dices
-que te gusto y esos momentos donde nos hacemos sentir bien.
-
+Me encanta cuando me dices que me amas, cuando me dices que te gusto y esos momentos en los que simplemente hablamos y somos nosotros.
 </p>
 
 
 <p>
-
-Me gusta esa manera tuya de ser, esa intensidad que tienes,
-porque es algo que te hace diferente y especial para mí.
-
+Me gusta mucho tu forma de ser, esa intensidad que tienes y esa manera tan tuya de demostrar cariño, porque eso es una de las cosas que más me gustan de ti.
 </p>
 
 
 <p>
-
-Aunque haya distancia entre nosotros, quiero que sepas que eres
-alguien muy importante para mí. Me gusta hablar contigo,
-reírme contigo y compartir esos momentos que tenemos.
-
+Gracias por cada sonrisa, cada conversación y cada momento bonito que compartimos. Me gusta la persona que eres y la forma en la que haces que mis días sean mejores.
 </p>
 
 
 <p>
-
-Gracias por llegar a mi vida, mi bombón.
-Espero que al ver esto sonrías, porque lo hice pensando en ti.
-
+Nunca cambies esa forma tan especial que tienes de ser, porque eso es parte de lo que hace que seas tú, mi princesa, mi preciosa, mi bombón ❤️
 </p>
 
 
@@ -274,7 +252,7 @@ Feliz Día de la Novia, María ❤️
 
 <br><br>
 
-Te quiero mucho ❤️
+Te quiero mucho.
 
 <br><br>
 
@@ -294,7 +272,9 @@ Tu colombiano desde Costa Rica 🇨🇴❤️🇨🇷
 
 
 
+
 <script>
+
 
 function abrirCarta(){
 
@@ -305,9 +285,71 @@ document.getElementById("carta").style.display="block";
 }
 
 
+
+// Corazones y símbolos cayendo
+
+const simbolos=[
+"❤️",
+"💗",
+"✨",
+"♡",
+"01",
+"10",
+"LOVE"
+];
+
+
+for(let i=0;i<50;i++){
+
+let elemento=document.createElement("div");
+
+elemento.innerHTML=
+simbolos[Math.floor(Math.random()*simbolos.length)];
+
+elemento.style.position="fixed";
+elemento.style.top="-30px";
+elemento.style.left=Math.random()*100+"vw";
+elemento.style.fontSize=(15+Math.random()*25)+"px";
+elemento.style.color="#ff4f9a";
+elemento.style.zIndex="1";
+elemento.style.pointerEvents="none";
+
+
+document.body.appendChild(elemento);
+
+
+let tiempo=5+Math.random()*7;
+
+
+elemento.animate(
+
+[
+{
+transform:"translateY(0) rotate(0deg)",
+opacity:1
+},
+
+{
+transform:"translateY(110vh) rotate(360deg)",
+opacity:0
+}
+
+],
+
+{
+duration:tiempo*1000,
+iterations:Infinity,
+delay:Math.random()*5000
+}
+
+);
+
+
+}
+
+
 </script>
 
 
 </body>
-
 </html>
